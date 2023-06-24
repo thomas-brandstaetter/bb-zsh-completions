@@ -1,10 +1,11 @@
 #!/bin/sh
 
-ZC_SOURCES="_ccache _clang-format _cmake _port"
-ZC_URL="https://raw.githubusercontent.com/zsh-users/zsh-completions/master/src"
-
 cd src;
 
+ZC_SOURCES="_ccache _clang-format _cmake _port"
+ZC_URL="https://raw.githubusercontent.com/zsh-users/zsh-completions/master/src"
 for i in $ZC_SOURCES; do
     curl -O "${ZC_URL}/$i"
 done
+
+curl -O "https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/pylint/_pylint"
